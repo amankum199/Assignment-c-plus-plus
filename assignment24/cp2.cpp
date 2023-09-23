@@ -1,0 +1,1 @@
+/*Define a function to find the highest value digit in a given number*/
