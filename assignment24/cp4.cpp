@@ -25,16 +25,15 @@ int main()
     cout << "Enter the number" << endl;
     cin >> n;
     cout << endl;
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i <= n; i++)
     {
         for (int j = 0; j <= i; j++)
         {
             int k = 0;
             if (j == 0)
-                while (k++ <= (n-i))
+                while (k++ <= (n - i))
                     cout << " ";
-                
-            cout << comb(i,j)<<" ";
+            cout << comb(i, j) << " ";
         }
         cout << endl;
     }
