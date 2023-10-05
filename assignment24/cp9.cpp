@@ -2,7 +2,8 @@
 both the numbers can be integer or real.*/
 #include<iostream>
 using namespace std;
+
 int main()
 {
-    
+
 }
