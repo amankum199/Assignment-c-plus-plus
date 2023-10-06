@@ -27,14 +27,14 @@ public:
 };
 int main()
 {
-    int x, y, m, n;
+    Complex c1, c2;
+    int x, y;
     cout << "enter the number for 1st complex number" << endl;
     cin >> x >> y;
-    cout << "enter the number for 2nd complex number" << endl;
-    cin >> m >> n;
-    Complex c1, c2;
     c1.set(x, y);
-    c2.set(m, n);
+    cout << "enter the number for 2nd complex number" << endl;
+    cin >> x >> y;
+    c2.set(x, y);
     c1.print(c2);
     c1.add(c2);
     return 0;
