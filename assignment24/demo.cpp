@@ -1,6 +1,7 @@
 /*Define a class to represent a complex number. stote real and imaginary part.
 also define methods to set values real and imaginary part of a ccomplex number.
 define one more method to display a complex number */
+
 #include <iostream>
 using namespace std;
 class Complex
