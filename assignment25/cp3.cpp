@@ -1,0 +1,2 @@
+/*Define a class Factorial and define an instance member function to find the Factorial
+of a number using class*/
