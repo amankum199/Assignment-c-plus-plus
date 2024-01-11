@@ -15,15 +15,8 @@ public:
     }
     void sq()
     {
-        for (int i = 0; i <=10; i++)
-        {
-            if(a==0)
-            break;
-            int f;
-            f = a % 10;
-            a = a / 10;
-            cout << f;
-        }
+        
+        
     }
 };
 int main()

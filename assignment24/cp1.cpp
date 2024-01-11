@@ -17,7 +17,6 @@ int main()
     cout << "Enter number" << endl;
     cin >> a;
     if (prime(a) == 0)
-
         cout << "prime number";
     else
         cout << "Not prime number";
