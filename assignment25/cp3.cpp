@@ -11,7 +11,7 @@ public:
     int set(int m)
     {
         a=m;
-    }
+    } 
     int fac()
     {
         int b = 1;
