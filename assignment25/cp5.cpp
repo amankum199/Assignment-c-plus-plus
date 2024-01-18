@@ -5,7 +5,7 @@ using namespace std;
 class ReverseNumber
 {
 private:
-    int a;
+    int a,b;
 
 public:
     void set(int m)
@@ -21,7 +21,7 @@ public:
             int f;
             f = a % 10;
             a = a / 10;
-            cout << f;
+            cout<<f;
         }
     }
 };
@@ -32,6 +32,7 @@ int main()
     cout << "Enter the number" << endl;
     cin >> c;
     k.set(c);
+    cout << "Reversed no. is " <<endl;
     k.fac();
     return 0;
 }

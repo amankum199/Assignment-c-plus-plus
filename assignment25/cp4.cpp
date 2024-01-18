@@ -5,7 +5,7 @@ using namespace std;
 class LargestNumber
 {
 private:
-    int a,b,c;
+    int a,b,c,big;
 
 public:
     int set(int m, int n, int o)
@@ -14,14 +14,18 @@ public:
         b = n;
         c = o;
     }
+    int getn()
+    {
+        return big;
+    }
     int larg()
     {
         if(a>b && a>c)
-        cout<<a<<" is greatest";
+        big=a;
         if(b>a && b>c)
-        cout<<b<<" is greatest";
+        big=b;
         if(c>a && c>b)
-        cout<<c<<" is greatest";
+        big=c;
     }
 };
 int main()
@@ -32,5 +36,6 @@ int main()
     cin>>x>>y>>z;
     f.set(x,y,z);
     f.larg();
+    cout<<"Largest number is "<<f.getn()<<endl;
     return 0;
 }
