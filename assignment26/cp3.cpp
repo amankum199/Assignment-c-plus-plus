@@ -7,10 +7,7 @@ class Cube
     double side;
 
     public:
-    void set(double si)
-    {
-        side=si;
-    }
+    
     double volume()
     {
         return side*side*side;
@@ -32,11 +29,11 @@ class Cube
 int main()
 {
     double a1;
-    Cube c1(2.34),c2;
+    Cube c1(2.34);
     cout<<"Volume of first cube is "<<c1.volume()<<endl;
     cout<<"Enter the side of second cube"<<endl;
     cin>>a1;
-    c2.set(a1);
+    Cube c2(a1);
     cout<<"Volume of second cube is "<<c2.volume()<<endl;
     return 0;
 }
