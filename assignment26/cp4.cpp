@@ -17,7 +17,7 @@ public:
     }
     ~Counter()
     {
-        cout << "Destructing  " << count << endl;
+        cout << "Destructing  " << count-- << endl;
     }
 };
 int Counter::count;

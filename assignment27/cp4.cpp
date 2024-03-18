@@ -14,66 +14,75 @@ private:
     int sec;
 
 public:
-    Time(int h, int m, int s)
-    {
-        cout << "parameterised constructor called" << endl;
-        hour = h;
-        min = m;
-        sec = s;
-    }
-    Time(const Time &t)
-    {
-        cout << "copy constructor called" << endl;
-        hour = t.hour;
-        min = t.min;
-        sec = t.sec;
-    }
     Time()
     {
+        hour = min = sec = 0;
         cout << "default constructor called" << endl;
     }
-    friend bool operator==(Time t1, Time t2);
-    friend ostream &operator<<(ostream &os, Time T);
-    friend istream &operator>>(istream &is, Time T);
-};
-bool operator==(Time t1, Time t2)
-{
-    cout << "operator == called" << endl;
-    if (t1.hour == t2.hour)
+    friend int operator>>(istream &input, Time &t)
     {
-        if (t1.min == t2.min)
-        {
-            if (t1.sec == t2.sec)
-                return true;
-        }
+        cout << "Input called" << endl;
+        cout << "Enter hours:" << endl;
+        input >> t.hour;
+        cout << "Enter minutes:" << endl;
+        input >> t.min;
+        cout << "Enter Seconds:" << endl;
+        input >> t.sec;
+        t.min = t.min + t.sec / 60;
+        t.sec %= 60;
+        t.hour = t.hour + t.min / 60;
+        t.min %= 60;
+        if (t.hour >= 25)
+            return 1;
         else
-            return false;
+            return 0;
     }
-    else
-        return false;
-}
-ostream &operator<<(ostream &os, Time T)
-{
-    return os;
-}
-istream &operator>>(istream &is, Time T)
-{
-    return is;
-}
+    friend void operator<<(ostream &output, Time &t)
+    {
+        cout << "Output called" << endl;
+        output << "Hours :" << t.hour << endl;
+        output << "Minutes :" << t.min << endl;
+        output << "Second :" << t.sec << endl;
+    }
+    int operator==(Time t1)
+    {
+        int tot = hour * 3600 + min * 60 + sec;
+        int tot1 = t1.hour * 3600 + t1.min * 60 + t1.sec;
+        if (tot == tot1)
+            return 1;
+        else
+            return 0;
+    }
+    ~Time()
+    {
+        cout << "Destructed" << endl;
+    }
+};
 int main()
 {
-    int a, b, c, d, e, f;
-    cout << "enter 1st time" << endl;
-    cin >> a >> b >> c;
-    cout << "enter 2nd time" << endl;
-    cin >> d >> e >> f;
-
-    Time ti1(a, b, c);
-    Time ti2(d, e, f);
-    bool comp;
-    comp = ti1 == ti2;
-
-    cout << comp << endl;
+    Time t, t1;
+    cout << "Enter First time" << endl
+         << endl;
+    if (cin >> t)
+    {
+        cout << "Invalid time" << endl;
+        return 0;
+    }
+    cout << "First Time" << endl;
+    cout << t;
+    cout << "Enter Second time" << endl
+         << endl;
+    if (cin >> t1)
+    {
+        cout << "Invalid time" << endl;
+        return 0;
+    }
+    cout << "Second Time" << endl;
+    cout << t1;
+    if (t == t1)
+        cout << "Times are Same"<<endl;
+    else
+        cout << "Times are Different"<<endl;
 
     return 0;
 }
