@@ -4,7 +4,7 @@ using namespace std;
 class Counter
 {
 private:
-   static int count;
+    static int count;
 
 public:
     Counter()
@@ -23,7 +23,7 @@ public:
 int Counter::count;
 int main()
 {
-    Counter c1, c2, c3;
+    Counter c1, c2, c3, c4, c5;
     cout << "After calling Constructor  " << c1.getcount() << endl;
     return 0;
 }

@@ -15,7 +15,7 @@ public:
         rateOfInterest = r;
         year = y;
     }
-    int calculate()
+    int calculatesi()
     {
         si = (principal * rateOfInterest * year) / 100;
         return si;
@@ -28,6 +28,6 @@ public:
 int main()
 {
     Bank b1(10000,3,2);
-    cout<<"Simple Interest is "<<b1.calculate()<<endl;
+    cout<<"Simple Interest is "<<b1.calculatesi()<<endl;
     return 0;
 }
