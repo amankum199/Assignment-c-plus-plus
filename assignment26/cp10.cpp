@@ -22,7 +22,9 @@ int main()
 {
     StaticCount c1;
     c1.incr();
+    c1.show();
     c1.incr();
+    c1.show();
     c1.incr();
     c1.show();
     return 0;

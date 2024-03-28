@@ -6,20 +6,23 @@ using namespace std;
 class Box
 {
 private:
-    int length, breadth, height;
-    int vol;
+    int l, b, h;
 
 public:
-    Box(int l, int b, int h)
+    Box()
     {
-        length = l;
-        breadth = b;
-        height = h;
     }
-    int volume()
+    Box(int length, int breadth, int height)
     {
-        vol = length * breadth * height;
-        return vol;
+        l = length;
+        b = breadth;
+        h = height;
+    }
+    int vol()
+    {
+        int volume;
+        volume = l * b * h;
+        return volume;
     }
     ~Box()
     {
@@ -27,10 +30,10 @@ public:
 };
 int main()
 {
-    int a,b,c;
-    cout<<"Enter the length breadth and height of the box."<<endl;
-    cin>>a>>b>>c;
-    Box b1(a,b,c);
-    cout<<"The volume of the box is "<<b1.volume()<<endl;
+    int a, b, c;
+    cout << "Enter the Length breadth and volume" << endl;
+    cin >> a >> b >> c;
+    Box b1(a, b, c);
+    cout << "Volume is " << b1.vol() << endl;
     return 0;
 }
