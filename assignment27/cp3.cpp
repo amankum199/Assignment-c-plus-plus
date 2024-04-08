@@ -14,11 +14,11 @@ public:
         cout << "Enter the number. " << endl;
         cin >> real >> img;
     }
-    friend Complex operator+(Complex c1, Complex c2);
     void show()
     {
         cout << real << " + " << img << "i" << endl;
     }
+    friend Complex operator+(Complex c1, Complex c2);
 };
 Complex operator+(Complex c1, Complex c2)
 {

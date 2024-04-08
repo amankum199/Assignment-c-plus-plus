@@ -80,9 +80,9 @@ int main()
     cout << "Second Time" << endl;
     cout << t1;
     if (t == t1)
-        cout << "Times are Same"<<endl;
+        cout << "Times are Same" << endl;
     else
-        cout << "Times are Different"<<endl;
+        cout << "Times are Different" << endl;
 
     return 0;
 }
