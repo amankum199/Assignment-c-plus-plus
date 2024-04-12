@@ -36,7 +36,7 @@ int main()
     complex c2(2,7);
     complex c1;
     cin>>c1;
-    cout<<c1;
-    cout<<c2<<c3<<endl;
+    // cout<<c1;
+    cout<<c1<<c2<<c3<<endl;
 
 }
