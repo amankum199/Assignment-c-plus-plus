@@ -41,11 +41,11 @@ public:
 int main()
 {
     Array b;
-    b.setArray(5, 110);
+    b.setArray(5, 11);
 
-    b.display(10);
+    b.display(19);
 
-    cout<<b[150];
+    cout<<b[11];
 
     return 0;
 }
