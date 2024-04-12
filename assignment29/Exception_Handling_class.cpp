@@ -4,7 +4,7 @@ class A
 {
     int x;
 public :
-    f1()
+    
 };
 int main()
 {
@@ -35,8 +35,6 @@ int main()
     {
         cout<<"Rajnikant is here then no fear"<<endl;
     }
-
-
     cout<<"Result = "<<c;
 
     return 0;

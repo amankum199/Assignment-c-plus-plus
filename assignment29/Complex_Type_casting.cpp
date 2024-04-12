@@ -16,7 +16,6 @@ public :
     {
 
     }
-
     void display()
     {
         cout<<"Real is "<<real<<" Img is "<<img<<endl;

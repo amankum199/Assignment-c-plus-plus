@@ -4,7 +4,6 @@ class Dollar;
 class Rupee
 {
     float x;
-
 public :
 
     int getR()
