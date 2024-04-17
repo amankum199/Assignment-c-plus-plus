@@ -6,7 +6,7 @@ int main()
 {
     float num1, num2, ans;
     char Operator;
-    cout << "perform arithmetic operator" << endl;
+    cout << "Perform arithmetic operator" << endl;
     cout << "---------------------------------------------" << endl;
     try
     {
@@ -28,15 +28,17 @@ int main()
             break;
         case '-':
             ans = num1 - num2;
+            break;
         case '*':
             ans = num1 * num2;
+            break;
         case '/':
             if (num2 == 0)
                 throw 0;
             ans = num1 / num2;
             break;
         }
-        cout<<"\n Answer : "<<num1<<" "<<Operator<<" "<<num2<<" = "<<ans<<endl;;
+        cout<<"Answer : "<<num1<<" "<<Operator<<" "<<num2<<" = "<<ans<<endl;;
     }
     catch (const char r)
     {
