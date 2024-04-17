@@ -1,41 +1,43 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-class A
-{
-    int x;
-public :
-    
-};
+// class A
+// {
+//   int x;
+
+// public:
+// };
 int main()
 {
-    int a, b,c;
-    cout<<"Enter 2 numbers"<<endl;
-    cin>>a>>b;
+  int a, b, c;
+  cout << "Enter 2 numbers" << endl;
+  cin >> a >> b;
 
-    try
-    {
-      if(b == 0)
-        throw "Divide by Zero Error";
+  try
+  {
+    if (b == 0)
+      throw "Divide by Zero Error";
 
-      if(b == 1)
-        throw b;
+    if (b == 1)
+      throw b;
 
-      if(b == 2)
-        throw exception();
+    if (b == 2)
+      throw exception();
 
-      c = a/b;
+    c = a / b;
+  }
+  catch (const char *msg)
+  {
+    cout << msg << endl;
+  }
+  catch (int x)
+  {
+    cout << "Me hu shaktimaan " << x << endl;
+  }
+  catch (...)
+  {
+    cout << "Rajnikant is here then no fear" << endl;
+  }
+  cout << "Result = " << c;
 
-    }catch(const char * msg)
-    {
-        cout<<msg<<endl;
-    }catch(int x)
-    {
-        cout<<"Me hu shaktimaan "<<x<<endl;
-    }catch(...)
-    {
-        cout<<"Rajnikant is here then no fear"<<endl;
-    }
-    cout<<"Result = "<<c;
-
-    return 0;
+  return 0;
 }
