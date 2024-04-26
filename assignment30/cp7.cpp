@@ -8,36 +8,33 @@ using namespace std;
 int main()
 {
     char username[100];
-    char password[50];
-    cout<<"Enter uasername"<<endl;
+    cout<<"Enter Username"<<endl;
     gets(username);
-    cout<<"Enter Password"<<endl;
-    gets(password);
     try
     {
-        if(strlen(password)<6)
+        if(strlen(username)>6)
         {
-            cout<<"Password must be more than of 6 character"<<endl;
-        throw"Invalid password";
+            cout<<"Username must be less than of 6 character"<<endl;
+        throw"Invalid Username";
         }
-        bool digit_yes=false;
+        bool digit_character=false;
         bool valid;
-        int len = strlen(password);
+        int len = strlen(username);
         for(int i=0;i<len;i++)
         {
-            if(isdigit(password[i]))
-            digit_yes=true;
+            if(isalnum(username[i]))
+            digit_character=true;
         }
-        if(!digit_yes)
+        if(!digit_character)
         {
             valid = false;
-            cout<<"Password must contain digit.."<<endl;
-            throw "Invalid Password";
+            cout<<"Username must contain digit.."<<endl;
+            throw "Invalid Username...";
         }
         else
         {
             valid=true;
-            cout<<"Correct password"<<endl;
+            cout<<"Username Accepted"<<endl;
         }
     }
     catch(const char *c)
