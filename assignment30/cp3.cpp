@@ -8,6 +8,7 @@ int main()
     char Operator;
     cout << "Perform arithmetic operator" << endl;
     cout << "---------------------------------------------" << endl;
+    do{
     try
     {
         cout << "Enter first number" << endl;
@@ -38,15 +39,16 @@ int main()
             ans = num1 / num2;
             break;
         }
-        cout<<"Answer : "<<num1<<" "<<Operator<<" "<<num2<<" = "<<ans<<endl;;
+        cout << "Answer : " << num1 << " " << Operator << " " << num2 << " = " << ans << endl;
+        ;
     }
     catch (const char r)
     {
-        cout<<"Exception caught.... \n Bad operator : "<<r<<"is not valid"<<endl;
+        cout << "Exception caught.... \n Bad operator : " << r << " is not valid" << endl;
     }
-    catch(const int a)
+    catch (const int a)
     {
-        cout<<"\n Error : Bad opration...";
+        cout << "\n Error : Bad opration...";
     }
     return 0;
 }
