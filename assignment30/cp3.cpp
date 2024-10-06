@@ -8,7 +8,6 @@ int main()
     char Operator;
     cout << "Perform arithmetic operator" << endl;
     cout << "---------------------------------------------" << endl;
-    do{
     try
     {
         cout << "Enter first number" << endl;
@@ -51,4 +50,4 @@ int main()
         cout << "\n Error : Bad opration...";
     }
     return 0;
-}
+    }
